@@ -1,0 +1,342 @@
+/*
+	Name : Space Clock
+	Date : 3/23/2015
+	Devloped By : ABHIJIT KUNDU (CST) & SUROJIT PALMAL (ECE)
+	KG ENGRINEERING INSTITUTE
+	Bishnupur  -  Bankura
+*/
+
+*{margin:0; padding: 0;}
+body{max-width:1366px;margin: 0 auto;}
+#whole{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	height: 100%;
+	background-image:url("img/space.jpg");
+	background-size: 100% 120%;
+	background-repeat: no;
+	overflow: hidden;
+	width: 100%;
+	animation: bodydiv 2s 20s;
+	animation-fill-mode: backwards;
+	-webkit-animation: bodydiv 2s 20s;
+	-webkit-animation-fill-mode: backwards;
+	}
+#right{
+	width: 900px;
+	overflow: hidden;
+	color: white;
+}
+#left{
+	width: 400px;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 0 5px black;
+	overflow: hidden;
+	color: white;
+	animation: show 1s 29.5s;
+	animation-fill-mode: backwards;
+	-webkit-animation: show 1s 29.5s;
+	-webkit-animation-fill-mode: backwards;
+}
+#left .datedetails{
+	display:flex;
+	flex-flow: row-warp;
+	font-size: 100%;
+	margin: 0px auto;
+	height: auto;
+	background:#e5e5e5;
+	background:rgba(3,3,3,0.3);
+	font-family: century gothic;
+	animation: time 1s 31.5s;
+	animation-fill-mode: backwards;
+	-webkit-animation: time 1s 31.5s;
+	-webkit-animation-fill-mode: backwards;
+}
+#left .date{
+	padding: 10px;
+	font-size: 570%;
+	opacity: 1;
+	font-family: eras demi itc;
+}
+#left .month{
+	padding-top: 20px;
+	font-size: 200%;
+	text-align: left;
+}
+#left .day{
+	color: white;
+	font-size: 250%;
+	text-align: left;
+	}
+#left .me{
+	bottom: 0;
+	padding: 10 0;
+	position: fixed;
+	width: 400px;
+	background:rgba(3,3,3,0.3);
+	animation: time .5s 33.5s;
+	animation-fill-mode: backwards;
+	-webkit-animation: time .5s 33.5s;
+	-webkit-animation-fill-mode: backwards;
+}
+#left .year{
+	padding: 10px;
+	font-size: 300%;
+	font-family: eras demi itc;
+	animation: time 1s 30.5s;
+	animation-fill-mode: backwards;
+	-webkit-animation: time 1s 30.5s;
+	-webkit-animation-fill-mode: backwards;
+}
+/*------------------------------------------------------------time-------------------------------------*/
+#timedetails{
+	text-align: center;
+	margin-top: 100px;
+}
+#time{
+	display:flex;
+	flex-flow: row-warp;
+	justify-content:space-between;
+	font-size: 600%;
+	margin: 0px auto;
+	height: auto;
+	padding: 0 10px;
+	animation: time 1s 32.5s;
+	animation-fill-mode: backwards;
+	-webkit-animation: time 1s 32.5s;
+	-webkit-animation-fill-mode: backwards;
+}
+#time .hour, .minit, .second{
+	padding: 10px;
+	min-width: 100px;
+	color:white;
+}
+#time .details{
+	font-size: 15px;
+	min-width: 100px;
+	text-align: center;
+	margin: 10px 10px 0 10px;
+	padding: 10px 0;
+	border-bottom: 3px solid white;
+	color: white;
+}
+/*--------------------------------------------------------clock--------------------------------------*/
+#ground{
+	position: relative;
+	width: 500px;
+	margin: 60px auto;
+}
+#clock{
+	top: 10px;
+	height: 500px;
+	width: 500px;
+	border-radius: 50%;
+	position: absolute;
+}
+#clock .hours,#clock .minits,#clock .seconds{
+	position: absolute;
+	top: 250px;
+	border-radius: 0 0 8px 8px;
+	transform-origin: top center;
+	box-shadow: 0px 0px 10px black;
+	background: white;
+}
+#clock .hours{
+	width: 18px;
+	height: 140px;
+	left: 241px;
+	animation: clock_hand 1.5s 21.5s;
+	animation-fill-mode: backwards;
+	-webkit-animation: clock_hand 1.5s 21.5s;
+	-webkit-animation-fill-mode: backwards;
+}
+#clock .minits{
+	width: 12px;
+	height: 180px;
+	left: 244px;
+	animation: clock_hand 1.5s 23s;
+	animation-fill-mode: backwards;
+	-webkit-animation: clock_hand 1.5s 23s;
+	-webkit-animation-fill-mode: backwards;
+}
+#clock .seconds{
+	width: 6px;
+	height: 210px;
+	left: 247px;
+	background: red;
+	animation: clock_hand 1.5s 24.5s;
+	animation-fill-mode: backwards;
+	-webkit-animation: clock_hand 1.5s 24.5s;
+	-webkit-animation-fill-mode: backwards;
+}
+#clock .seconds:after{
+	position: absolute;
+	content: " ";
+	width: 10px;
+	height: 60px;
+	left:-2px;
+	top: -60px;
+	background: red;
+	animation: clock_hand .5s 26s;
+	animation-fill-mode: backwards;
+	-webkit-animation: clock_hand .5s 26s;
+	-webkit-animation-fill-mode: backwards;
+}
+#clock .point{
+	height: 20px;
+	width: 20px;
+	top:228px;
+	left:230px;
+	border: 10px solid red;
+	border-radius: 50%;
+	position: absolute;
+	box-shadow: 0px 0px 2px #000 inset;
+	background: #e5e5e5;
+	animation: round .5s 21s;
+	animation-fill-mode: backwards;
+	-webkit-animation: round .5s 21s;
+	-webkit-animation-fill-mode: backwards;
+}
+/*------------------------------------ wlcome div ---------------------------*/
+#welcomewhole{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image:url("img/metal.jpg");
+	background-size: 100% 100%;
+	visibility: hidden;
+	animation: welcomediv 20s;
+	animation-fill-mode: forwards;
+	-webkit-animation: welcomediv 20s;
+	-webkit-animation-fill-mode: forwards;
+}
+#welcomediv{
+	overflow: hidden;
+}
+#welcomediv .heading{
+	text-align: right;
+	color: #000;
+	font-size: 300%;
+	font-weight: 900;
+	text-shadow: 1px 1px 2px #999;
+	padding: 10% 28% 10% 10%;
+	font-family: Century Gothic;
+	animation: welcometext .5s 4s;
+	animation-fill-mode: backwards;
+	-webkit-animation: welcometext .5s 4s;
+	-webkit-animation-fill-mode: backwards;
+}
+#welcomediv p{
+	color: #666;
+	position: absolute;
+	font-size: 16px;
+	font-family: candara;
+	text-shadow:none;
+	top: 85%;
+	right: 28%;
+	text-shadow: 0px 0px 5px #000;
+	animation: welcometext .5s 6s;
+	animation-fill-mode: backwards;
+	-webkit-animation: welcometext .5s 6s;
+	-webkit-animation-fill-mode: backwards;
+}
+
+li {
+    position: absolute;
+    list-style-position:inside;
+	list-style-type: none;
+    top: 48%; left: 50%;
+    width: 20px; height: 60px;
+    margin: -10px;
+	font-size: 200%;
+	animation: round 1.5s 26.5s;
+	animation-fill-mode: backwards;
+	-webkit-animation: round 1.5s 26.5s;
+	-webkit-animation-fill-mode: backwards;
+}
+
+li:nth-child(1) { transform: rotate(300deg) translate(200px) rotate(-300deg); }
+li:nth-child(2) { transform: rotate(330deg) translate(200px) rotate(-330deg); }
+li:nth-child(3) { transform: translate(200px); }
+li:nth-child(4) { transform: rotate(30deg) translate(200px) rotate(-30deg); }
+li:nth-child(5) { transform: rotate(60deg) translate(200px) rotate(-60deg); }
+li:nth-child(6) { transform: rotate(90deg) translate(200px) rotate(-90deg); }
+li:nth-child(7) { transform: rotate(120deg) translate(200px) rotate(-120deg); } 
+li:nth-child(8) { transform: rotate(150deg) translate(200px) rotate(-150deg); }
+li:nth-child(9) { transform: translate(-200px); }
+li:nth-child(10) { transform: rotate(210deg) translate(200px) rotate(-210deg); }
+li:nth-child(11) { transform: rotate(240deg) translate(200px) rotate(-240deg); }
+li:nth-child(12) { transform: rotate(270deg) translate(200px) rotate(-270deg); }
+
+canvas{
+	position: absolute;
+	top:0;
+	left: 0;
+	margin: -50px 0 0 -50px;
+	opacity: .4;
+	transform: rotate(-90deg);
+	animation: round 1.5s 28s;
+	animation-fill-mode: backwards;
+	-webkit-animation: round 1.5s 28s;
+	-webkit-animation-fill-mode: backwards;
+}
+/*-------------------------------------------- animation keyframes -------------------------------------*/
+@keyframes clock_hand {
+    from {height: 0px; visibility: visible; }
+}
+@keyframes round {
+    from {transform: rotate(360deg); opacity: 0; }
+}
+@keyframes show {
+    from {width: 0px; opacity: 1; background: #000; }
+}
+@keyframes time {
+    from {width: 0px; opacity: 0; transform: rotateX(900deg); }
+}
+@keyframes welcomediv {
+    0% { visibility: visible; opacity: 0;}
+	10% {visibility: visible; opacity: .2;}
+	15% {visibility: visible; opacity: 1;}
+	20% {visibility: visible; opacity: 1;}
+	30% {visibility: visible; opacity: 1;}
+	95% {visibility: visible; opacity: 1;}
+}
+@keyframes bodydiv {
+    from { opacity: 0; }
+	to{ opacity: 1; }
+}
+@keyframes welcometext{
+	from{opacity: 0; bottom: 0;}
+}
+/*------------------------------------- webkit --------------------------------*/
+@-webkit-keyframes clock_hand {
+    from {height: 0px; visibility: visible; }
+}
+@-webkit-keyframes round {
+    from {transform: rotate(360deg); opacity: 0; }
+}
+@-webkit-keyframes show {
+    from {width: 0px; opacity: 1; background: #000; }
+}
+@-webkit-keyframes time {
+    from {width: 0px; opacity: 0; transform: rotateX(900deg); }
+}
+@-webkit-keyframes welcomediv {
+    0% { visibility: visible; opacity: 0;}
+	10% {visibility: visible; opacity: .2;}
+	15% {visibility: visible; opacity: 1;}
+	20% {visibility: visible; opacity: 1;}
+	30% {visibility: visible; opacity: 1;}
+	95% {visibility: visible; opacity: 1;}
+}
+@-webkit-keyframes bodydiv {
+    from { opacity: 0; }
+	to{ opacity: 1; }
+}
+@-webkit-keyframes welcometext{
+	from{opacity: 0; bottom: 0;}
+}

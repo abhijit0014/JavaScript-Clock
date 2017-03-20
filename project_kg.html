@@ -1,0 +1,105 @@
+<!--
+	Name : Space Clock
+	Date : 3/23/2015
+	Devloped By : ABHIJIT KUNDU (CST) & SUROJIT PALMAL (ECE)
+	KG ENGRINEERING INSTITUTE
+	Bishnupur  -  Bankura
+-->
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="jquery.min.js"></script>
+	<link href="project_kg.css" rel="stylesheet"/>
+	<script src="project_kg.js"></script>
+	<script>
+	$(document).ready(function(){
+		var day = ["Sunday", "Monday", "Tuesday", "Wednessday", "Thursday", "Friday", "Saturday"];
+		var month = ["January", "February", "March", "April", "May", "June", "July", "Auguest", "Septembar", "Octobar", "Novembar", "December"];
+		var dt = new Date;
+		$('#left .year').html(dt.getFullYear());
+		$('#left .date').html(dt.getDate());
+		$('#left .month').html(month[dt.getMonth()]);
+		$('#left .day').html(day[dt.getDay()]);
+		
+		document.getElementById('theme_song').play();
+		setTimeout(function(){	document.getElementById('point_tone').play(); },21000);
+		setTimeout(function(){	document.getElementById('clock_hands_tone1').play(); },21500); 
+		setTimeout(function(){	document.getElementById('clock_hands_tone2').play(); },23000); 
+		setTimeout(function(){	document.getElementById('clock_hands_tone1').play(); },24500); 
+		setTimeout(function(){	document.getElementById('numbers_tone').play(); },26500);
+		setTimeout(function(){	document.getElementById('canvas_tone').play(); },28000);
+		setTimeout(function(){	document.getElementById('leftpan_tone').play(); },29500);
+		setTimeout(function(){	document.getElementById('timedetails_tone').play(); },30500);
+		setTimeout(function(){	document.getElementById('timedetails_tone').play(); },31500);
+		setTimeout(function(){	document.getElementById('timedetails_tone').play(); },32500);
+		setTimeout(function(){	document.getElementById('timedetails_tone').play(); },33500);
+	});
+	</script>
+</head>
+<body>
+	<div id="whole">
+		<div id="left">
+			<div class="year"></div>
+			<div class="datedetails">
+				<div class="date"></div>
+				<div class="monthday">
+					<div class="month"></div>
+					<div class="day"></div>
+				</div>
+			</div>
+			<div id="timedetails">
+				<div id="time">
+						<div class="details">HOUR</div>
+						<div class="details">MINUTE</div>
+						<div class="details">SECOND</div>
+				</div>
+				<div id="time">
+						<div class="hour"></div>
+						<div class="minit"></div>
+						<div class="second"></div>
+				</div>
+			</div>
+			<div class="me">Developed By - ABHijiT & SUROjiT</div>
+		</div>
+		<div id="right">
+			<div id="ground">
+				<div id="clock">
+				 <ol>
+					<li>1</li><li>2</li><li>3</li>
+					<li>4</li><li>5</li><li>6</li>
+					<li>7</li><li>8</li><li>9</li>
+					<li>10</li><li>11</li><li>12</li>    
+				</ol>
+					<div class="hours"></div>
+					<div class="minits"></div>
+					<div class="seconds"></div>
+					<div class="point"></div>
+					<canvas id="myCanvas" height= "600px" width="600px"></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="welcomewhole">
+		<div id="welcomediv">
+		<div class="heading">
+			welcome to the project<br/>SPACE CLOCK<br/>
+			<br/><img src="img/loading.gif"/>
+		</div>
+		<p>2015 KG ENGRINEERING INSTITUTE - BISHNUPUR, BANKURA - DEVELOPED BY SUROJIT & ABHIJIT</p>
+		</div>
+	</div>
+	
+	<audio id="theme_song" src="sounds/themesong.mp3"></audio>
+	<audio id="point_tone" src="sounds/point.mp3"></audio>
+	<audio id="clock_hands_tone1" src="sounds/clock_hands.mp3"></audio>
+	<audio id="clock_hands_tone2" src="sounds/clock_hands.mp3"></audio>
+	<audio id="numbers_tone" src="sounds/numbers.mp3"></audio>
+	<audio id="canvas_tone" src="sounds/canvas.mp3"></audio>
+	<audio id="leftpan_tone" src="sounds/leftpan.mp3"></audio>
+	<audio id="timedetails_tone" src="sounds/timedetails.mp3"></audio>
+	<audio id="timedetails_tone" src="sounds/start_song.mp3"></audio>
+	<audio id="timedetails_tone" src="sounds/end_song.mp3"></audio>
+	
+</body>
+</html>
